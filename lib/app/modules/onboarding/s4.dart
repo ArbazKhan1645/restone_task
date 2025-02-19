@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -51,7 +49,6 @@ class _Sc4State extends State<Sc4> with SingleTickerProviderStateMixin {
   }
 
   void logEvent() async {
-
     // await FacebookAppEvents()
     //     .logViewContent(id: "onboarding_screen_4", type: "page");
   }
@@ -110,6 +107,7 @@ class _Sc4State extends State<Sc4> with SingleTickerProviderStateMixin {
                       child: Text(
                         " Join Millions of",
                         style: GoogleFonts.poppins(
+                          color: Colors.white,
                           fontSize: 32,
                           fontWeight: FontWeight.w600,
                         ),
@@ -126,6 +124,7 @@ class _Sc4State extends State<Sc4> with SingleTickerProviderStateMixin {
                       style: GoogleFonts.poppins(
                         fontSize: 32,
                         fontWeight: FontWeight.w600,
+                        color: Colors.white,
                       ),
                     ),
                   ),

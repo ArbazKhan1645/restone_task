@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:redstone_task/app/modules/onboarding/s3.dart';
 import 'package:redstone_task/app/modules/onboarding/s4.dart';
 import 'package:redstone_task/app/modules/onboarding/s5.dart';
-
+import 'package:redstone_task/app/routes/app_pages.dart';
 
 class OnBord1 extends StatefulWidget {
   const OnBord1({super.key});
@@ -34,9 +35,7 @@ class _OnBord1State extends State<OnBord1> {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
-                    selectedIndex >= 1
-                        ? "assets/icons/bg2.png"
-                        : "assets/images/splash.png",
+                    "assets/images/splash.png",
                   ),
                   fit: BoxFit.cover,
                 ),
@@ -49,13 +48,12 @@ class _OnBord1State extends State<OnBord1> {
                 child: Column(
                   children: [
                     Padding(
-                      padding:
-                          selectedIndex >= 1
-                              ? EdgeInsets.only(
-                                bottom:
-                                    MediaQuery.of(context).size.height * 0.046,
-                              )
-                              : const EdgeInsets.all(0),
+                      padding: selectedIndex >= 1
+                          ? EdgeInsets.only(
+                              bottom:
+                                  MediaQuery.of(context).size.height * 0.046,
+                            )
+                          : const EdgeInsets.all(0),
                       child: GestureDetector(
                         onTap: () async {
                           if (selectedIndex == 2) {
@@ -75,12 +73,14 @@ class _OnBord1State extends State<OnBord1> {
                                 ),
                               );
                               return;
+                            } else {
+                              Get.toNamed(Routes.TINDER);
                             }
+                          } else {
+                            setState(() {
+                              selectedIndex++;
+                            });
                           }
-
-                          setState(() {
-                            selectedIndex++;
-                          });
                         },
                         child: Container(
                           width: MediaQuery.of(context).size.width * 0.87,
@@ -119,58 +119,58 @@ class _OnBord1State extends State<OnBord1> {
                     const SizedBox(height: 15),
                     selectedIndex == 0
                         ? Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Padding(
-                            padding: const EdgeInsets.only(bottom: 5),
-                            child: Column(
-                              children: [
-                                Text(
-                                  "By proceeding, you accept our ",
-                                  style: GoogleFonts.inter(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w300,
+                            alignment: Alignment.bottomCenter,
+                            child: Padding(
+                              padding: const EdgeInsets.only(bottom: 5),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "By proceeding, you accept our ",
+                                    style: GoogleFonts.inter(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w300,
+                                    ),
                                   ),
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      "Terms of use",
-                                      style: GoogleFonts.inter(
-                                        fontSize: 12,
-                                        color: const Color(0xff58BE8E),
-                                        fontWeight: FontWeight.w300,
-                                        decoration: TextDecoration.underline,
-                                        decorationColor: const Color(
-                                          0xff58BE8E,
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "Terms of use",
+                                        style: GoogleFonts.inter(
+                                          fontSize: 12,
+                                          color: const Color(0xff58BE8E),
+                                          fontWeight: FontWeight.w300,
+                                          decoration: TextDecoration.underline,
+                                          decorationColor: const Color(
+                                            0xff58BE8E,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Text(
-                                      " and ",
-                                      style: GoogleFonts.inter(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w300,
-                                      ),
-                                    ),
-                                    Text(
-                                      "Privacy policy",
-                                      style: GoogleFonts.inter(
-                                        color: const Color(0xff58BE8E),
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w300,
-                                        decoration: TextDecoration.underline,
-                                        decorationColor: const Color(
-                                          0xff58BE8E,
+                                      Text(
+                                        " and ",
+                                        style: GoogleFonts.inter(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w300,
                                         ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                              ],
+                                      Text(
+                                        "Privacy policy",
+                                        style: GoogleFonts.inter(
+                                          color: const Color(0xff58BE8E),
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w300,
+                                          decoration: TextDecoration.underline,
+                                          decorationColor: const Color(
+                                            0xff58BE8E,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                        )
+                          )
                         : Container(),
                     SizedBox(height: MediaQuery.of(context).size.width * 0.08),
                   ],

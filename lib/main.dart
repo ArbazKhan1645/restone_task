@@ -1,14 +1,10 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
 import 'app/routes/app_pages.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // usePathUrlStrategy();
   FlutterError.onError = (FlutterErrorDetails details) {
     // AppLogger.error(details.toString());
     FlutterError.presentError(details);
@@ -39,14 +35,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Trade my device',
+      title: 'RedStone AI',
       builder: (context, widget) {
         return MediaQuery(
-          data: MediaQuery.of(
-            context,
-          ).copyWith(textScaler: const TextScaler.linear(1.0)),
-          child: widget!,
-        );
+            data: MediaQuery.of(
+              context,
+            ).copyWith(textScaler: const TextScaler.linear(1.0)),
+            child: widget!);
       },
       // theme: lightThemeData(context),
       themeMode: ThemeMode.light,

@@ -1,4 +1,3 @@
-
 import 'package:dotted_line/dotted_line.dart';
 
 import 'package:flutter/material.dart';
@@ -43,7 +42,6 @@ class Sc5State extends State<Sc5> with SingleTickerProviderStateMixin {
   }
 
   void logEvent() async {
-
     // await FacebookAppEvents()
     //     .logViewContent(id: "onboarding_screen_4", type: "page");
   }
@@ -154,6 +152,7 @@ class Sc5State extends State<Sc5> with SingleTickerProviderStateMixin {
                       label,
                       style: GoogleFonts.poppins(
                         fontSize: 17,
+                        color: Colors.white,
                         fontWeight: FontWeight.w600,
                       ),
                     ),

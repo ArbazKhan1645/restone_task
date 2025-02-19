@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -47,7 +45,6 @@ class _Sc3State extends State<Sc3> with SingleTickerProviderStateMixin {
   }
 
   void logEvent() async {
- 
     // await FacebookAppEvents()
     //     .logViewContent(id: "onboarding_screen_3", type: "page");
   }
@@ -101,6 +98,7 @@ class _Sc3State extends State<Sc3> with SingleTickerProviderStateMixin {
                           "Personal ",
                           style: GoogleFonts.poppins(
                             fontSize: 32,
+                            color: Colors.white,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -124,6 +122,7 @@ class _Sc3State extends State<Sc3> with SingleTickerProviderStateMixin {
                       "in your phone",
                       style: GoogleFonts.poppins(
                         fontSize: 32,
+                        color: Colors.white,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
