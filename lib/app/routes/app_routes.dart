@@ -8,6 +8,7 @@ abstract class Routes {
   static const HOME = _Paths.HOME;
   static const ANIMATED_CHART = _Paths.ANIMATED_CHART;
   static const TINDER = _Paths.TINDER;
+  static const ONBOARDING_PAGES = _Paths.ONBOARDING_PAGES;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const HOME = '/home';
   static const ANIMATED_CHART = '/animated-chart';
   static const TINDER = '/tinder';
+  static const ONBOARDING_PAGES = '/onboarding-pages';
 }

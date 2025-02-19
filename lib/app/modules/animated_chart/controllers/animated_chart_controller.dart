@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
-
-import '../../models/bar_models/bar_chart_model.dart';
+import '../../../models/bar_models/bar_chart_model.dart';
 
 class AnimatedChartController extends GetxController {
   RxList<ChartData> chartData = <ChartData>[].obs;
